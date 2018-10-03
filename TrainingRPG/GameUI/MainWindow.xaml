@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Awesome Game?" Height="768" Width="1024">
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="225"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="Aquamarine"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Character Info" Background="Coral"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Blue"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Inventory/Quests" Background="Cyan"/>
+        <Label Grid.Row="2" Grid.Column="1" Content="Combat/Movement controls" Background="DodgerBlue"/>
     </Grid>
 </Window>
