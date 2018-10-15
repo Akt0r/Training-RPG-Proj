@@ -28,5 +28,10 @@ namespace WPF_UI
             _gameSession = new GameSession();
             DataContext = _gameSession;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _gameSession.CurrentPlayer.ExperiencePoints += 10;
+        }
     }
 }
