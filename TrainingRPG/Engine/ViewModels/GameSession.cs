@@ -11,6 +11,8 @@ namespace Engine.ViewModels
     {
         public Player CurrentPlayer { get; set; }
 
+        public Location CurrentLocation { get; set; }
+
         public GameSession()
         {
             CurrentPlayer = new Player
@@ -21,6 +23,15 @@ namespace Engine.ViewModels
                 ExperiencePoints = 0,
                 HitPoints = 10,
                 Level = 1
+            };
+
+            CurrentLocation = new Location
+            {
+                XCoordinate = 0,
+                YCoordinate = -1,
+                Name = "Home",
+                Description = "This is your house",
+                ImageName = "/Engine;component/Images/Locations/Home.png"
             };
         }
     }
