@@ -36,5 +36,46 @@ namespace Engine.Models
             destination.Portals.Add(opposite, new Portal() { Destination = this });
             destination.AwailableSides |= opposite;
         }
+
+        public Location NorthLocation()
+        {
+            return LocationAt(Side.North);
+        }
+
+        public Location WestLocation()
+        {
+            return LocationAt(Side.West);
+        }
+
+        public Location EastLocation()
+        {
+            return LocationAt(Side.East);
+        }
+
+        public Location SouthLocation()
+        {
+            return LocationAt(Side.South);
+        }
+
+        public bool HasLocationToNorth
+        { get => AwailableSides.HasFlag(Side.North); }
+
+        public bool HasLocationToWest
+        { get => AwailableSides.HasFlag(Side.West); }
+
+        public bool HasLocationToEast
+        { get => AwailableSides.HasFlag(Side.East); }
+
+        public bool HasLocationToSouth
+        { get => AwailableSides.HasFlag(Side.South); }
+
+        private Location LocationAt(Side side)
+        {
+            if (AwailableSides.HasFlag(side))
+            {
+                return Portals[side].Destination;
+            }
+            throw new InvalidOperationException();
+        }
     }
 }
