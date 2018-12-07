@@ -13,10 +13,7 @@
 
         public override GameItem Clone()
         {
-            var clone = (Weapon)base.Clone();
-            clone.MinDamage = MinDamage;
-            clone.MaxDamage = MaxDamage;
-            return clone;
+            return new Weapon(ItemTypeId, Name, Price, MinDamage, MaxDamage);
         }
     }
 }
