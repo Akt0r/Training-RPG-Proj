@@ -12,7 +12,9 @@ namespace Engine.Factories
             _standartGameItems = new Dictionary<int, GameItem>
             {
                 { 1001, new Weapon(1001, "Pointy Stick", 1, 1, 2) },
-                { 1002, new Weapon(1002, "Rusty Sword", 5, 1, 3) }
+                { 1002, new Weapon(1002, "Rusty Sword", 5, 1, 3) },
+                { 9001, new GameItem(9001, "Snake fang", 1)},
+                { 9002, new GameItem(9002, "Snakeskin", 2) }
             };
         }
 
